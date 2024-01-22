@@ -21,6 +21,12 @@ WaterAmount ble større enn 60% av SnowAmount. Dette var fordi jeg glemte at nå
 
 Noe som tok frustrerende mye tid:
 - Å få CSV-innlesning til å funke.
+- Jeg måtte sette meg inn i CSVHelper bilioteket og lese på dokumentasjonen.
+- Måtte sette config til å ha riktig delimiter (;) og ignorere manglende header.
+
+Refaktorering:
+- Etter å ha satt opp logikken til CalculateRain, skjønte jeg at å tilsette vann til systemet var likt for CalculateMelt. 
+- Jeg valgte derfor å lage en ny funksjon, AddWaterToSystem, for å kunne gjenbruke mest mulig av logikken. 
 
 Snuoprasjon underveis
 - Gikk fra å representere vann og is som en prosentandel av snø til å lagre de som egene mengder. Det ble unødvendig komplekst med prosentandel.
